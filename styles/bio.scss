@@ -41,7 +41,7 @@
             position: absolute;
             bottom: -1rem;
             left: 0;
-            height: 4px;
+            height: .25rem;
             width: 100%;
             background-color: $White;
             transform: scaleX(0);
@@ -165,31 +165,33 @@
 .main {
 
     &__title{
-        padding: 10% 0 5% 5%;
-        font-size: 45px;
-        line-height: 32px;
+        padding: 2.6875rem 0 1.3438rem 1.3438rem;
+        font-size: 2.8125rem;
+        line-height: 2rem;
         font-weight: 700;
         color: $BandSite-Black;
 
         @include tablet {
-            padding-top: 5%;
-            padding-left: 10%;
+            padding-top: 3.75rem;
+            padding-left: 3.75rem;
+            padding-bottom: 2.5rem;
         }
         @include desktop{
-            padding-bottom: 5%;            
+            padding-left: 9rem;
+            padding-bottom: 3.75rem;            
         }
     }
     
     &__image--container {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 1.3438rem;
+        padding-right: 1.3438rem;
 
         @include tablet{
-            padding: 0 12%;
+            padding: 0 7.5547rem;
         }
 
         @include desktop{
-            padding:0 18%;
+            padding:0 15.75rem;
         }
     }
 
@@ -199,80 +201,78 @@
     }
 
     &__quote {
-        font-size:25px;
+        font-size:1.5625rem;
         font-weight: 700;
-        line-height: 40px;
+        line-height: 2.5rem;
         color: $BandSite-Black; 
         @include tablet{
-            padding-top: 5%;
+            padding-top: 2.3919rem;
         }
         @include desktop{
-            font-size:20px;
-            line-height: 30px;
+            font-size:1.25rem;
+            line-height: 1.875rem;
             width: 80%;
         }
     }
     &__quote--name{
-        padding-top: 3%;
-        font-size:25px;
+        padding-top: .725rem;
+        font-size:1.5625rem;
         font-weight: 700;
-        line-height: 40px;
+        line-height: 2.5rem;
         color: $BandSite-Black;
         @include tablet{
-            font-size:20px; 
+            font-size:1.25rem; 
         } 
         @include desktop{
-            font-size:18px;
+            font-size:1.125rem;
             font-weight: 600;
         }
     }
     &__content{
         flex-direction: column; 
-        gap: 20px;
-        padding: 5%;
-        font-size: 20px;
+        gap: 1.25rem;
+        padding: 1.3438rem;
+        font-size: 1.25rem;
 
         @include tablet{
             gap: 50px;
-            padding-left: 12%;
-            padding-right: 12%;
+            padding: 0 7.5547rem;
             display: flex;
             flex-direction: row; 
         }
         @include desktop{
-            padding-left: 18%;
-            padding-right: 18%;
-            padding-top: 2%; 
+            padding: 0 15.75rem;
         }
     }
     &__content--title{
-        padding-top: 10%;
-        padding-left: 5%;
-        font-size: 25px;
+        padding-top: 2.6875rem;
+        padding-left: 1.3438rem;
+        font-size: 1.5625rem;
         font-weight: 200;
-        line-height: 30px;
+        line-height: 1.875rem;
         color: $BandSite-DarkBlack;
 
         @include tablet{
-            padding-left: 12%;
+            padding-left: 7.5547rem;
+            padding-bottom: 2rem;
         }
         @include desktop{
-            padding-left: 18%;
-            padding-top: 5%;
+            padding-left: 15.75rem;
+            padding-top: 4.375rem;
         }
     }
     &__content--para1 , &__content--para2{
-        font-size: 25px;
-        line-height: 35px;
-        font-weight: 50;
+        font-size: 1.5625rem;
+        line-height: 2.1875rem;
+        font-weight: 500;
         color: $BandSite-Black;
-        padding-bottom: 20%;
+        padding-bottom: 3.125rem;
 
         @include tablet{
-            font-size: 15px;
-            line-height: 25px;
+            font-size: .9375rem;
+            line-height: 1.5625rem;
             font-weight: 100;
-            padding-bottom: 50px;
+            padding-bottom: 3.125rem;
         }
     }
 }
@@ -280,34 +280,34 @@
 .gallery{
 
     &__image--container {
-        padding: 0 5%;
+        padding: 0 1.3438rem;
         @include flex(column,center,center);
-        gap: 30px; 
+        gap: 1.875rem; 
         
         @include tablet{
-            padding: 5%;
+            padding: 3.1478rem;
             @include flex(row,space-between,flex-start);
             flex-wrap: wrap;
         }
         @include desktop{
-            padding: 3% 10% 0 10%;
+            padding: 2.625rem 8.75rem 0 8.75rem;
         }
     }
     &__title {
-        padding-left: 5%; 
-        padding-bottom: 3%;
-        font-size: 40px; 
+        padding-left: 1.3438rem; 
+        padding-bottom: .806rem;
+        font-size: 2.5rem; 
         color: $BandSite-Black;
 
         @include tablet{
             padding-bottom: 0;
-            font-size: 36px;
-            line-height: 32px;
+            font-size: 2.25rem;
+            line-height: 2rem;
             font-weight: 700;
         }
         @include desktop{
-            padding-left: 10%;
-            padding-bottom: 20px;
+            padding-left: 8.75rem;
+            padding-bottom: 1.25rem;
         }
 
     }
@@ -325,22 +325,22 @@
 
     background-color: $BandSite-Black;
     color:$Mercury;
-    padding: 5%;
+    padding: 1.3438rem;
     @include flex(column, space-between, flex-start);
-    margin-top: 5%;
+    margin-top: 1.3438rem;
     position: relative;
 
 
     &__title{
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
         font-weight: 700;
         color: $White;
-        padding-bottom: 5%;
+        padding-bottom: 1.3438rem;
     }
 
     &__item{
-        padding-bottom: 5%;
+        padding-bottom: 1.3438rem;
         a{
             text-decoration: none;
             color: $Mercury;
@@ -348,20 +348,20 @@
 
     }
     &__copyright{
-        font-size: 15px;
+        font-size: .9375rem;
         position: relative;
     }
     &__title--subheading{
-        padding-bottom: 5%;
+        padding-bottom: 1.3438rem;
     }
     &__content{
-        padding-bottom: 5%;
+        padding-bottom: 1.3438rem;
         margin-top: auto;
     }
     &__icon--container{
         @include flex(row,flex-start, center);
-        gap: 50px; 
-        padding-bottom: 5%;
+        gap: 3.125rem; 
+        padding-bottom: 1.3438rem;
 
     }
     &__icon{
@@ -369,11 +369,11 @@
         width: auto; 
     }
     &__logo{
-        padding-top: 10%;
-        padding-bottom: 5%;
+        padding-top: 2.416rem;
+        padding-bottom: 1.3438rem;
 
         &--link{
-            width: 120px;
+            width: 7.5rem;
             height: 1.25rem;
         }
     }
@@ -384,7 +384,7 @@
             @include flex(row, flex-start, flex-end);
         }
         &__icon--container{
-            padding-left: 9%;
+            padding-left: 4.6185rem;
         }
         &__item--container {
             @include flex(row, space-between, center);
@@ -392,12 +392,12 @@
             width: 100%;
         }
         &__title--subheading{
-            padding-bottom: 10%;
-            font-size: 14px;
+            padding-bottom: 1.2591rem;
+            font-size: .875rem;
         }
         &__content{
             @include flex(row, space-between, center);
-            font-size: 14px;
+            font-size: .875rem;
         }
 
         &__logo {
@@ -413,22 +413,22 @@
     }
 
     @media(min-width:$desktop-min){
-        padding: 5% 10%;
+        padding: 4.375rem 8.75rem;
         @include flex(row, space-between, flex-start);
 
         &__top{
             @include flex(row, flex-start, flex-end);
         }
         &__icon--container{
-            padding-left: 15%;
+            padding-left: 7.0976rem;
         }
         &__title--subheading{
-            padding-bottom: 10%;
-            font-size: 14px;
+            padding-bottom: 1.2591rem;
+            font-size: .875rem;
         }
         &__content{
-            padding-bottom: 10%;
-            font-size: 14px;
+            padding-bottom: 1.2591rem;
+            font-size: .875rem;
         }
         &__item--container{
             @include flex(row, space-between, center);
@@ -442,7 +442,7 @@
         }
         &__logo {
             position: absolute;
-            padding-right: 5%;
+            padding-right: 1.3438rem;
         }
     }
 }
