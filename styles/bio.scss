@@ -321,6 +321,11 @@
     &__image{
         width: 100%; 
         height: auto; 
+        filter: grayscale(100%);
+        
+        &:hover {
+            filter: grayscale(0); 
+        }
 
         @include tablet{
             width: calc(33.33% - 1.25rem);
