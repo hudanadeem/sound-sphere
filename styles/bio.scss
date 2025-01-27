@@ -147,8 +147,8 @@
         bottom: 40%; 
         left: 5%;
         color: $White; 
-        font-size: 3rem;
-        line-height: 4.25rem;
+        font-size: 2rem;
+        line-height: 2rem;
         font-weight: 700;
         z-index: 2;
 
@@ -157,6 +157,7 @@
         }
         @include desktop{
             left: 10%;
+            bottom: 45%;
         }
         
     }
@@ -166,12 +167,13 @@
 
     &__title{
         padding: 2.6875rem 0 1.3438rem 1.3438rem;
-        font-size: 2.8125rem;
+        font-size: 2rem;
         line-height: 2rem;
         font-weight: 700;
         color: $BandSite-Black;
 
         @include tablet {
+            font-size: 3rem;
             padding-top: 3.75rem;
             padding-left: 3.75rem;
             padding-bottom: 2.5rem;
@@ -235,7 +237,7 @@
         font-size: 1.25rem;
 
         @include tablet{
-            gap: 50px;
+            gap: 3.125rem;
             padding: 0 7.5547rem;
             display: flex;
             flex-direction: row; 
@@ -290,11 +292,11 @@
             flex-wrap: wrap;
         }
         @include desktop{
-            padding: 2.625rem 8.75rem 0 8.75rem;
+            padding: 2.625rem 8.75rem 2rem 8.75rem;
         }
     }
     &__title {
-        padding-left: 1.3438rem; 
+        padding-left: 3.1478rem; 
         padding-bottom: .806rem;
         font-size: 2.5rem; 
         color: $BandSite-Black;
@@ -316,7 +318,7 @@
         height: auto; 
 
         @include tablet{
-            width: calc(33.33% - 20px);
+            width: calc(33.33% - 1.25rem);
         }
     }
 }
@@ -325,7 +327,7 @@
 
     background-color: $BandSite-Black;
     color:$Mercury;
-    padding: 1.3438rem;
+    padding: 1.3438rem 3.1478rem;
     @include flex(column, space-between, flex-start);
     margin-top: 1.3438rem;
     position: relative;
@@ -439,6 +441,7 @@
             @include flex(column, flex-start, flex-start);
             margin-top: auto;
             text-align: left;
+            padding-top: 1.875rem;
         }
         &__logo {
             position: absolute;
