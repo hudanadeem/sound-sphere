@@ -1,0 +1,457 @@
+@use "./partials/typography" as *;
+@use "./partials/global" as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+
+.nav{
+    background-color: $BandSite-Black;
+    @include flex(column, center, center);
+    padding: 2rem 0 1rem 0; 
+
+
+    @include tablet{
+        @include flex(row, flex-start ,center);
+        padding: 1.5rem 3rem;
+    }
+    @include desktop{
+        @include flex(row, flex-start ,center);
+        padding: 1.5rem 10rem;
+    }
+
+    &__list {
+        @include flex(row, space-between, center);
+        width: 100%;
+        list-style: none;
+        padding: 0;
+
+        @include tablet{
+            @include flex(row, center, center);
+            width: 45%;
+        }
+        @include desktop{
+            width: 30%;
+        }
+    }
+
+    &__list--item {
+        flex: 1;
+        text-align: center;
+
+        @include tablet{
+            flex: 0;
+        }
+        @include desktop{
+            text-align: left;
+        }
+    }
+
+    &__logo--link {
+        height: 1.25rem;
+        width: 7.5rem;
+        margin-bottom: 0.5rem;
+
+        @include tablet{
+            margin: 0;
+        }
+    }
+
+    &__link {
+        color: $Mercury;
+        font-size: 1.2rem;
+        font-weight: 100;
+        text-decoration: none;
+        display: block;
+        padding: 1rem;
+        position: relative;
+
+        @include tablet{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        @include desktop{
+            padding-right: 0;
+            padding-left: 0;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            height: .25rem;
+            width: 100%;
+            background-color: $White;
+            transform: scaleX(0);
+
+            @include tablet{
+                bottom: -1.5rem;
+            }
+        }
+
+        &:hover {
+            color: $White;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+
+        &--active {
+            font-weight: bold;
+            color: $White;
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+
+    &__content{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__image--container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+    &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $BandSite-Black; 
+        opacity: 0.5; 
+        z-index: 1; 
+    }
+    &__title{
+        position: absolute;
+        bottom: 40%; 
+        left: 5%;
+        color: $White; 
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        z-index: 2;
+
+        @include tablet{
+            font-size: 4rem;
+        }
+        @include desktop{
+            left: 10%;
+            bottom: 45%;
+        }
+        
+    }
+}
+
+.main {
+
+    &__title{
+        padding: 2.6875rem 0 1.3438rem 1.3438rem;
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: $BandSite-Black;
+
+        @include tablet {
+            font-size: 3rem;
+            padding-top: 3.75rem;
+            padding-left: 3.75rem;
+            padding-bottom: 2.5rem;
+        }
+        @include desktop{
+            padding-left: 9rem;
+            padding-bottom: 3.75rem;            
+        }
+    }
+    
+    &__image--container {
+        padding-left: 1.3438rem;
+        padding-right: 1.3438rem;
+
+        @include tablet{
+            padding: 0 7.5547rem;
+        }
+
+        @include desktop{
+            padding:0 15.75rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__quote {
+        font-size:1.5625rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        color: $BandSite-Black; 
+        @include tablet{
+            padding-top: 2.3919rem;
+        }
+        @include desktop{
+            font-size:1.25rem;
+            line-height: 1.875rem;
+            width: 80%;
+        }
+    }
+    &__quote--name{
+        padding-top: .725rem;
+        font-size:1.5625rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        color: $BandSite-Black;
+        @include tablet{
+            font-size:1.25rem; 
+        } 
+        @include desktop{
+            font-size:1.125rem;
+            font-weight: 600;
+        }
+    }
+    &__content{
+        flex-direction: column; 
+        gap: 1.25rem;
+        padding: 1.3438rem;
+        font-size: 1.25rem;
+
+        @include tablet{
+            gap: 3.125rem;
+            padding: 0 7.5547rem;
+            display: flex;
+            flex-direction: row; 
+        }
+        @include desktop{
+            padding: 0 15.75rem;
+        }
+    }
+    &__content--title{
+        padding-top: 2.6875rem;
+        padding-left: 1.3438rem;
+        font-size: 1.5625rem;
+        font-weight: 200;
+        line-height: 1.875rem;
+        color: $BandSite-DarkBlack;
+
+        @include tablet{
+            padding-left: 7.5547rem;
+            padding-bottom: 2rem;
+        }
+        @include desktop{
+            padding-left: 15.75rem;
+            padding-top: 4.375rem;
+        }
+    }
+    &__content--para1 , &__content--para2{
+        font-size: 1.5625rem;
+        line-height: 2.1875rem;
+        font-weight: 500;
+        color: $BandSite-Black;
+        padding-bottom: 3.125rem;
+
+        @include tablet{
+            font-size: .9375rem;
+            line-height: 1.5625rem;
+            font-weight: 100;
+            padding-bottom: 3.125rem;
+        }
+    }
+}
+
+.gallery{
+
+    &__image--container {
+        padding: 0 1.3438rem;
+        @include flex(column,center,center);
+        gap: 1.875rem; 
+        
+        @include tablet{
+            padding: 3.1478rem;
+            @include flex(row,space-between,flex-start);
+            flex-wrap: wrap;
+        }
+        @include desktop{
+            padding: 2.625rem 8.75rem 2rem 8.75rem;
+        }
+    }
+    &__title {
+        padding-left: 1.3438rem; 
+        padding-bottom: .806rem;
+        font-size: 2.5rem; 
+        color: $BandSite-Black;
+
+        @include tablet{
+            padding-left: 3.1478rem;
+            padding-bottom: 0;
+            font-size: 2.25rem;
+            line-height: 2rem;
+            font-weight: 700;
+        }
+        @include desktop{
+            padding-left: 8.75rem;
+            padding-bottom: 1.25rem;
+        }
+
+    }
+    &__image{
+        width: 100%; 
+        height: auto; 
+        filter: grayscale(100%);
+        
+        &:hover {
+            filter: grayscale(0); 
+        }
+
+        @include tablet{
+            width: calc(33.33% - 1.25rem);
+        }
+    }
+}
+
+.footer{
+
+    background-color: $BandSite-Black;
+    color:$Mercury;
+    padding: 1.3438rem;
+    @include flex(column, space-between, flex-start);
+    margin-top: 1.3438rem;
+    position: relative;
+
+    @include tablet{
+        padding: 3.1478rem;
+        @include flex(row, space-between, flex-start);
+    }
+
+    @include desktop{
+        padding: 4.375rem 8.75rem;
+    }
+
+    &__top{
+        @include tablet{
+            @include flex(row, flex-start, flex-end);
+        }
+    }
+
+    &__title{
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        color: $White;
+        padding-bottom: 1.3438rem;
+    }
+
+    &__item{
+        padding-bottom: 1.3438rem;
+        a{
+            text-decoration: none;
+            color: $Mercury;
+        }
+
+        &--container{
+            @include tablet{
+                @include flex(row, space-between, center);
+                gap: 2rem; 
+                width: 100%;
+            }
+            @include desktop{
+                gap: 3rem;
+                width: 120%;
+            }
+        }
+
+    }
+    &__copyright{
+        font-size: .9375rem;
+        position: relative;
+
+        @include tablet{
+            @include flex(column, flex-start, flex-start); 
+        }
+        @include desktop{
+            margin-top: auto;
+            text-align: left;
+            padding-top: 1.875rem;
+        }
+    }
+    &__title--subheading{
+        padding-bottom: 1.3438rem;
+
+        @include tablet{
+            padding-bottom: 1.2591rem;
+            font-size: .875rem;
+        }
+    }
+    &__content{
+        padding-bottom: 1.3438rem;
+        margin-top: auto;
+
+        @include tablet{
+            @include flex(row, space-between, center);
+            font-size: .875rem;
+        }
+        @include desktop{
+            padding-bottom: 1.2591rem;
+        }
+    }
+    &__icon--container{
+        @include flex(row,flex-start, center);
+        gap: 3.125rem; 
+        padding-bottom: 1.3438rem;
+
+        @include tablet{
+            padding-left: 4.6185rem;
+        }
+        @include desktop{
+            padding-left: 7.0976rem;
+        }
+    }
+    &__icon{
+        height: 2rem; 
+        width: auto; 
+    }
+    &__logo{
+        padding-top: 2.416rem;
+        padding-bottom: 1.3438rem;
+
+        @include tablet{
+            position: absolute;
+            top: 14%;
+            right: 5%;
+            padding: 0;
+        }
+        @include desktop{
+            right: 0%;
+            padding-right: 8.75rem;
+        }
+
+        &--link{
+            width: 7.5rem;
+            height: 1.25rem;
+        }
+    }
+}
