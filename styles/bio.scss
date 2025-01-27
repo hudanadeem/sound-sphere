@@ -9,22 +9,51 @@
     @include flex(column, center, center);
     padding: 2rem 0 1rem 0; 
 
+
+    @include tablet{
+        @include flex(row, flex-start ,center);
+        padding: 1.5rem 3rem;
+    }
+    @include desktop{
+        @include flex(row, flex-start ,center);
+        padding: 1.5rem 10rem;
+    }
+
     &__list {
         @include flex(row, space-between, center);
         width: 100%;
         list-style: none;
         padding: 0;
+
+        @include tablet{
+            @include flex(row, center, center);
+            width: 45%;
+        }
+        @include desktop{
+            width: 30%;
+        }
     }
 
     &__list--item {
         flex: 1;
         text-align: center;
+
+        @include tablet{
+            flex: 0;
+        }
+        @include desktop{
+            text-align: left;
+        }
     }
 
     &__logo--link {
         height: 1.25rem;
         width: 7.5rem;
         margin-bottom: 0.5rem;
+
+        @include tablet{
+            margin: 0;
+        }
     }
 
     &__link {
@@ -36,6 +65,18 @@
         padding: 1rem;
         position: relative;
 
+        @include tablet{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        @include desktop{
+            padding-right: 0;
+            padding-left: 0;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -45,6 +86,10 @@
             width: 100%;
             background-color: $White;
             transform: scaleX(0);
+
+            @include tablet{
+                bottom: -1.5rem;
+            }
         }
 
         &:hover {
@@ -64,47 +109,6 @@
             }
         }
     }
-    @media (min-width: $tablet-min) {
-        @include flex(row, flex-start ,center);
-        padding: 1.5rem 3rem;
-
-        &__list{
-            @include flex(row, center, center);
-            width: 45%;
-        }
-        &__logo--link{
-            margin: 0;
-        }
-        &__list--item {
-            flex: 0;
-        }
-        &__link {
-            margin-left: 1rem;
-            margin-right: 1rem;
-
-            &::after {
-                bottom: -1.5rem;
-            }
-
-        }
-    }  
-    @media (min-width: $desktop-min) {
-        @include flex(row, flex-start ,center);
-        padding: 1.5rem 10rem;
-
-        &__list{
-            width: 30%;
-        }
-        &__list--item {
-            text-align: left;
-        }
-        &__link{
-            padding-right: 0;
-            padding-left: 0;
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
-    }  
 }
 
 .header{
@@ -296,12 +300,13 @@
         }
     }
     &__title {
-        padding-left: 3.1478rem; 
+        padding-left: 1.3438rem; 
         padding-bottom: .806rem;
         font-size: 2.5rem; 
         color: $BandSite-Black;
 
         @include tablet{
+            padding-left: 3.1478rem;
             padding-bottom: 0;
             font-size: 2.25rem;
             line-height: 2rem;
@@ -327,11 +332,25 @@
 
     background-color: $BandSite-Black;
     color:$Mercury;
-    padding: 1.3438rem 3.1478rem;
+    padding: 1.3438rem;
     @include flex(column, space-between, flex-start);
     margin-top: 1.3438rem;
     position: relative;
 
+    @include tablet{
+        padding: 3.1478rem;
+        @include flex(row, space-between, flex-start);
+    }
+
+    @include desktop{
+        padding: 4.375rem 8.75rem;
+    }
+
+    &__top{
+        @include tablet{
+            @include flex(row, flex-start, flex-end);
+        }
+    }
 
     &__title{
         font-size: 2.25rem;
@@ -348,23 +367,63 @@
             color: $Mercury;
         }
 
+        &--container{
+            @include tablet{
+                @include flex(row, space-between, center);
+                gap: 2rem; 
+                width: 100%;
+            }
+            @include desktop{
+                gap: 3rem;
+                width: 120%;
+            }
+        }
+
     }
     &__copyright{
         font-size: .9375rem;
         position: relative;
+
+        @include tablet{
+            @include flex(column, flex-start, flex-start); 
+        }
+        @include desktop{
+            margin-top: auto;
+            text-align: left;
+            padding-top: 1.875rem;
+        }
     }
     &__title--subheading{
         padding-bottom: 1.3438rem;
+
+        @include tablet{
+            padding-bottom: 1.2591rem;
+            font-size: .875rem;
+        }
     }
     &__content{
         padding-bottom: 1.3438rem;
         margin-top: auto;
+
+        @include tablet{
+            @include flex(row, space-between, center);
+            font-size: .875rem;
+        }
+        @include desktop{
+            padding-bottom: 1.2591rem;
+        }
     }
     &__icon--container{
         @include flex(row,flex-start, center);
         gap: 3.125rem; 
         padding-bottom: 1.3438rem;
 
+        @include tablet{
+            padding-left: 4.6185rem;
+        }
+        @include desktop{
+            padding-left: 7.0976rem;
+        }
     }
     &__icon{
         height: 2rem; 
@@ -374,78 +433,20 @@
         padding-top: 2.416rem;
         padding-bottom: 1.3438rem;
 
-        &--link{
-            width: 7.5rem;
-            height: 1.25rem;
-        }
-    }
-    @media (min-width:$tablet-min){
-        @include flex(row, space-between, flex-start);
-
-        &__top {
-            @include flex(row, flex-start, flex-end);
-        }
-        &__icon--container{
-            padding-left: 4.6185rem;
-        }
-        &__item--container {
-            @include flex(row, space-between, center);
-            gap: 5rem; 
-            width: 100%;
-        }
-        &__title--subheading{
-            padding-bottom: 1.2591rem;
-            font-size: .875rem;
-        }
-        &__content{
-            @include flex(row, space-between, center);
-            font-size: .875rem;
-        }
-
-        &__logo {
+        @include tablet{
             position: absolute;
             top: 14%;
             right: 5%;
             padding: 0;
         }
+        @include desktop{
+            right: 0%;
+            padding-right: 8.75rem;
+        }
 
-        &__copyright {
-            @include flex(column, flex-start, flex-start); 
-        }
-    }
-
-    @media(min-width:$desktop-min){
-        padding: 4.375rem 8.75rem;
-        @include flex(row, space-between, flex-start);
-
-        &__top{
-            @include flex(row, flex-start, flex-end);
-        }
-        &__icon--container{
-            padding-left: 7.0976rem;
-        }
-        &__title--subheading{
-            padding-bottom: 1.2591rem;
-            font-size: .875rem;
-        }
-        &__content{
-            padding-bottom: 1.2591rem;
-            font-size: .875rem;
-        }
-        &__item--container{
-            @include flex(row, space-between, center);
-            gap: 3rem;
-            width: 120%;
-        }
-        &__copyright{
-            @include flex(column, flex-start, flex-start);
-            margin-top: auto;
-            text-align: left;
-            padding-top: 1.875rem;
-        }
-        &__logo {
-            position: absolute;
-            padding-right: 1.3438rem;
+        &--link{
+            width: 7.5rem;
+            height: 1.25rem;
         }
     }
 }
