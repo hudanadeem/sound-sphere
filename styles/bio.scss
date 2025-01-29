@@ -3,6 +3,26 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+.header__title{
+    position: absolute;
+    bottom: 40%; 
+    left: 5%;
+    color: $White; 
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    z-index: 2;
+
+    @include tablet{
+        font-size: 4rem;
+    }
+    @include desktop{
+        left: 10%;
+        bottom: 45%;
+    }   
+}
+
+
 
 .main {
 

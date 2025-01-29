@@ -183,27 +183,6 @@ body {
   opacity: 0.5;
   z-index: 1;
 }
-.header__title {
-  position: absolute;
-  bottom: 40%;
-  left: 5%;
-  color: #FFFFFF;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: 700;
-  z-index: 2;
-}
-@media screen and (min-width: 768px) {
-  .header__title {
-    font-size: 4rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header__title {
-    left: 10%;
-    bottom: 45%;
-  }
-}
 
 .footer {
   background-color: #323232;
@@ -357,4 +336,54 @@ body {
 .footer__logo--link {
   width: 7.5rem;
   height: 1.25rem;
+}
+
+.header__title {
+  position: absolute;
+  bottom: 40%;
+  left: 5%;
+  color: #FFFFFF;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  width: 70%;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .header__title {
+    width: 60%;
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__title {
+    left: 10%;
+    bottom: 40%;
+    width: 50%;
+    line-height: 5rem;
+  }
+}
+
+.header__album--title {
+  position: absolute;
+  bottom: 70%;
+  left: 5%;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  width: 70%;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .header__album--title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__album--title {
+    left: 10%;
+    bottom: 65%;
+  }
 }/*# sourceMappingURL=shows.css.map */

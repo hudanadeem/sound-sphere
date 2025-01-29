@@ -3,4 +3,47 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+.header__title{
+    position: absolute;
+    bottom: 40%; 
+    left: 5%;
+    color: $White; 
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    width: 70%;
+    z-index: 2;
+
+    @include tablet{
+        width: 60%;
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    @include desktop{
+        left: 10%;
+        bottom: 40%;
+        width: 50%;
+        line-height: 5rem;
+    }   
+}
+
+.header__album--title{
+    position: absolute;
+    bottom: 70%; 
+    left: 5%;
+    color: $White; 
+    font-size: 0.75rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    width: 70%;
+    z-index: 2;
+
+    @include tablet{
+        font-size: 2rem;
+    }
+    @include desktop{
+        left: 10%;
+        bottom: 65%; 
+    }
+}
 

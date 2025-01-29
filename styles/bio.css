@@ -183,27 +183,6 @@ body {
   opacity: 0.5;
   z-index: 1;
 }
-.header__title {
-  position: absolute;
-  bottom: 40%;
-  left: 5%;
-  color: #FFFFFF;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: 700;
-  z-index: 2;
-}
-@media screen and (min-width: 768px) {
-  .header__title {
-    font-size: 4rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header__title {
-    left: 10%;
-    bottom: 45%;
-  }
-}
 
 .footer {
   background-color: #323232;
@@ -357,6 +336,28 @@ body {
 .footer__logo--link {
   width: 7.5rem;
   height: 1.25rem;
+}
+
+.header__title {
+  position: absolute;
+  bottom: 40%;
+  left: 5%;
+  color: #FFFFFF;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__title {
+    left: 10%;
+    bottom: 45%;
+  }
 }
 
 .main__title {
