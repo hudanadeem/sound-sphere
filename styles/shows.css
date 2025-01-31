@@ -340,7 +340,7 @@ body {
 
 .header__title {
   position: absolute;
-  bottom: 40%;
+  bottom: 8rem;
   left: 5%;
   color: #FFFFFF;
   font-size: 2rem;
@@ -351,6 +351,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header__title {
+    bottom: 20rem;
     width: 60%;
     font-size: 4rem;
     line-height: 4.5rem;
@@ -358,42 +359,52 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .header__title {
+    bottom: 24rem;
     left: 10%;
-    bottom: 40%;
-    width: 50%;
+    width: 40%;
     line-height: 5rem;
   }
 }
 
 .header__album--title {
   position: absolute;
-  bottom: 70%;
+  bottom: 13rem;
   left: 5%;
   color: #FFFFFF;
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 2.5rem;
-  font-weight: 600;
+  font-weight: 400;
   width: 70%;
   z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .header__album--title {
+    bottom: 30rem;
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__album--title {
     left: 10%;
-    bottom: 65%;
+    bottom: 36rem;
   }
+}
+
+.header__content {
+  height: 120%;
+}
+
+.header__image--container {
+  height: 120%;
+  overflow: hidden;
 }
 
 .soundcloud {
   position: absolute;
-  top: 65%;
-  left: 5%;
+  top: 60%;
+  left: 4%;
   z-index: 2;
-  width: 50%;
+  width: 90%;
 }
 @media screen and (min-width: 768px) {
   .soundcloud {
@@ -404,14 +415,14 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .soundcloud {
-    width: 30%;
-    top: 40%;
-    left: 60%;
+    width: 35%;
+    top: 43%;
+    left: 57%;
   }
 }
 .soundcloud__player {
   width: 100%;
-  height: 70px;
+  height: 100px;
   border: none;
   padding: 5px;
   border-radius: 8px;

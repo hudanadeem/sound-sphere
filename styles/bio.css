@@ -546,4 +546,180 @@ body {
   .gallery__image {
     width: calc(33.33% - 1.25rem);
   }
+}
+
+.form-container {
+  padding: 1rem 1.3438rem 0rem 1.3438rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.form-container__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #323232;
+  padding-left: 1.8078rem;
+}
+@media screen and (min-width: 768px) {
+  .form-container__title {
+    padding-left: 2rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form-container__title {
+    padding-left: 7.75rem;
+  }
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.form__input {
+  padding: 15px;
+  height: 3rem;
+  border: 2px solid #E1E1E1;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+}
+.form__textarea {
+  height: 8rem;
+  resize: vertical;
+  padding: 15px;
+  border: 2px solid #E1E1E1;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+.form__comment {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 4px;
+  background-color: #323232;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .form__comment {
+    width: 20%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form__comment {
+    width: 40%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.form-container__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .form-container__layout {
+    padding: 1rem 5.5rem 0rem 5.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form-container__layout {
+    padding: 1rem 23.5rem 0rem 23.5rem;
+  }
+}
+.form__pfp {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  margin: 2.8rem 0;
+}
+.form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
+  color: #323232;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Nunito Sans";
+}
+.form__input::placeholder, .form__textarea::placeholder {
+  color: #323232;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Nunito Sans";
+}
+
+.comments-viewer {
+  padding: 1rem 1.3438rem 0rem 1.3438rem;
+}
+@media screen and (min-width: 768px) {
+  .comments-viewer {
+    padding: 1rem 6.75rem 0rem 6.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments-viewer {
+    padding: 1rem 25rem 0rem 25rem;
+  }
+}
+
+.comment {
+  border-top: 2px solid #AFAFAF;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+.comment:last-child {
+  border-bottom: 2px solid #AFAFAF;
+}
+.comment__header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+.comment__name {
+  color: #323232;
+  font-weight: 700;
+}
+.comment__content {
+  padding-bottom: 1rem;
+}
+.comment__date {
+  color: #AFAFAF;
+}
+.comment__pfp {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.comment__box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.5rem;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */
