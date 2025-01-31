@@ -31,11 +31,45 @@ const shows = [
     },
   ];
 
-  const list = document.getElementById('shows-list')
+  const listEl = document.getElementById("list");
+  shows.forEach(displayShows);
+  
+  function displayShows(show){
+      const showEl = document.createElement("div");
+      showEl.className = "show";
+  
+      const dateEl = document.createElement("div");
+      const dateTitle = document.createElement("h3");
+      dateTitle.className = "show__date--title";
+      dateTitle.textContent = "Date"
+      dateEl.className = "show__date";
+      dateEl.textContent = show.date;
+      showEl.append(dateTitle);
+      showEl.append(dateEl);
+  
+      const venueEl = document.createElement("div");
+      const venueTitle = document.createElement("h3");
+      venueTitle.className = "show__venue--title";
+      venueTitle.textContent = "Venue"
+      venueEl.className = "show__venue";
+      venueEl.textContent = show.venue;
+      showEl.append(venueTitle);
+      showEl.append(venueEl);
+  
+      const locationEl = document.createElement("div");
+      const locationTitle = document.createElement("h3");
+      locationTitle.className = "show__location--title";
+      locationTitle.textContent = "Location"
+      locationEl.className = "show__location";
+      locationEl.textContent = show.location;
+      showEl.append(locationTitle);
+      showEl.append(locationEl);
 
-  for(const showObj of shows){
-
-    const show = document.createElement('div')
-    show.textContent = showObj.date
-    list.append(show);
+      const buyTicketEl = document.createElement("button");
+      buyTicketEl.className = "show__button";
+      buyTicketEl.textContent="Buy Tickets";
+      showEl.append(buyTicketEl);
+  
+      listEl.append(showEl);
+  
   }
