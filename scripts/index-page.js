@@ -72,6 +72,27 @@ const form = document.getElementById("form");
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
 
+    const nameInput = e.target.name;
+    const commentInput = e.target.comment;
+
+    let error = false;
+
+    nameInput.classList.remove("error");
+    commentInput.classList.remove("error");
+
+    if (nameInput.value.trim() === "") {
+        nameInput.classList.add("error");
+        error = true;
+    }
+    if (commentInput.value.trim() === "") {
+        commentInput.classList.add("error");
+        error = true;
+    }
+
+    if (error) {
+      return;
+    }
+
     const item = {
         name: e.target.name.value,
         comment: e.target.comment.value,
@@ -81,8 +102,11 @@ form.addEventListener("submit",(e)=>{
     console.log(item);
 
 
-    comments.push(item);
+    comments.unshift(item);//check w TA
     listEl.replaceChildren();
     comments.forEach(displayComments);
+
+    nameInput.value = "";
+    commentInput.value = "";
 });
 
