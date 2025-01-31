@@ -3,59 +3,63 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+.header{
 
-.header__container--content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 1rem;
-
-    @include tablet{
-        padding: 12rem 3rem;
+    &__container--content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1rem;
+    
+        @include tablet{
+            padding: 12rem 3rem;
+        }
+        @include desktop{
+            padding: 21rem 9rem;
+        }
+    
     }
-
-}
-
-.header__title{
-    color: $White; 
-    font-size: 2rem;
-    line-height: 2.5rem;
-    font-weight: 700;
-    width: 80%;
-    z-index: 2;
-
-    @include tablet{
-        font-size: 4rem;
-        line-height: 4.5rem;
-        width: 70%;
-    }
-    @include desktop{
-        width: 44%;
-        line-height: 5rem;
-    }   
-}
-
-.header__album--title{
-    color: $White; 
-    font-size: 1rem;
-    line-height: 2.5rem;
-    font-weight: 400;
-    z-index: 2;
-
-    @include tablet{
+    &__title{
+        color: $White; 
         font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        width: 80%;
+        z-index: 2;
+    
+        @include tablet{
+            font-size: 4rem;
+            line-height: 4.5rem;
+            width: 70%;
+        }
+        @include desktop{
+            width: 50%;
+            line-height: 5rem;
+        }   
     }
-    @include desktop{
-        bottom: 36rem; 
-    }
-}
 
-.header__content{
-    height: 120%;
-}
-.header__image--container {
-    height: 120%;
-    overflow: hidden;
+    &__album--title{
+        color: $White; 
+        font-size: 1rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+        z-index: 2;
+    
+        @include tablet{
+            font-size: 2rem;
+        }
+        @include desktop{
+            bottom: 36rem; 
+        }
+    }
+    &__content{
+        height: 120%;
+    }
+    &__image--container {
+        height: 120%;
+        overflow: hidden;
+    }
+
 }
 
 
@@ -82,6 +86,13 @@
             height: 166px;
             margin-top: 2rem;
             width: 110%;
+        }
+        @include desktop{
+            padding: 0 9rem;
+            position: absolute;
+            right: 0;
+            top: 21rem;
+            width: 55%;
         }
     }
 }
