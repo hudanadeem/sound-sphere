@@ -338,54 +338,54 @@ body {
   height: 1.25rem;
 }
 
+.header__container--content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header__container--content {
+    padding: 12rem 3rem;
+  }
+}
+
 .header__title {
-  position: absolute;
-  bottom: 8rem;
-  left: 5%;
   color: #FFFFFF;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 700;
-  width: 70%;
+  width: 80%;
   z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .header__title {
-    bottom: 20rem;
-    width: 60%;
     font-size: 4rem;
     line-height: 4.5rem;
+    width: 70%;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__title {
-    bottom: 24rem;
-    left: 10%;
-    width: 40%;
+    width: 44%;
     line-height: 5rem;
   }
 }
 
 .header__album--title {
-  position: absolute;
-  bottom: 13rem;
-  left: 5%;
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 2.5rem;
   font-weight: 400;
-  width: 70%;
   z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .header__album--title {
-    bottom: 30rem;
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__album--title {
-    left: 10%;
     bottom: 36rem;
   }
 }
@@ -400,35 +400,30 @@ body {
 }
 
 .soundcloud {
-  position: absolute;
-  top: 60%;
-  left: 4%;
   z-index: 2;
-  width: 90%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .soundcloud {
-    top: 65%;
     width: 45%;
-    bottom: 20%;
   }
 }
 @media screen and (min-width: 1280px) {
   .soundcloud {
     width: 35%;
-    top: 43%;
-    left: 57%;
   }
 }
 .soundcloud__player {
   width: 100%;
   height: 100px;
   border: none;
-  padding: 5px;
-  border-radius: 8px;
+  margin-top: 1rem;
+  border-radius: 2px;
 }
 @media screen and (min-width: 768px) {
   .soundcloud__player {
     height: 166px;
+    margin-top: 2rem;
+    width: 110%;
   }
 }/*# sourceMappingURL=shows.css.map */

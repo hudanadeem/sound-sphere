@@ -3,48 +3,49 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+
+.header__container--content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+
+    @include tablet{
+        padding: 12rem 3rem;
+    }
+
+}
+
 .header__title{
-    position: absolute;
-    bottom: 8rem; 
-    left: 5%;
     color: $White; 
     font-size: 2rem;
     line-height: 2.5rem;
     font-weight: 700;
-    width: 70%;
+    width: 80%;
     z-index: 2;
 
     @include tablet{
-        bottom: 20rem;
-        width: 60%;
         font-size: 4rem;
         line-height: 4.5rem;
+        width: 70%;
     }
     @include desktop{
-        bottom: 24rem;
-        left: 10%;
-        width: 40%;
+        width: 44%;
         line-height: 5rem;
     }   
 }
 
 .header__album--title{
-    position: absolute;
-    bottom: 13rem; 
-    left: 5%;
     color: $White; 
     font-size: 1rem;
     line-height: 2.5rem;
     font-weight: 400;
-    width: 70%;
     z-index: 2;
 
     @include tablet{
-        bottom:30rem;
         font-size: 2rem;
     }
     @include desktop{
-        left: 10%;
         bottom: 36rem; 
     }
 }
@@ -59,33 +60,28 @@
 
 
 .soundcloud {
-    position: absolute;
-    top: 60%;
-    left: 4%;
     z-index: 2;
-    width:90%;
+    width:100%;
 
     @include tablet {
-        top: 65%;
         width: 45%;
-        bottom: 20%;
     }
 
     @include desktop {
         width: 35%;
-        top: 43%;
-        left: 57%;
     }
 
     &__player {
         width: 100%;
         height: 100px;
         border: none;
-        padding: 5px;
-        border-radius: 8px;
+        margin-top: 1rem;
+        border-radius: 2px;
 
         @include tablet{
             height: 166px;
+            margin-top: 2rem;
+            width: 110%;
         }
     }
 }
