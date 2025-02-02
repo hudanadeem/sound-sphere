@@ -73,11 +73,3 @@ const shows = [
       listEl.append(showEl);
   
   }
-
-//When the cursor hovers over a show item, the “hover state” style from the style guide will be 
-//applied to that item. This can be achieved using a pseudo-class in Sass.
-
-//Clicking on a show item will apply the “selected state” styling from the style guide to that 
-// item. This can be achieved by applying a modifier class using JavaScript. The item will stay 
-// selected until another item is clicked. Utilize your knowledge of JavaScript and Sass to 
-// accomplish this.

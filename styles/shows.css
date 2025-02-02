@@ -338,6 +338,9 @@ body {
   height: 1.25rem;
 }
 
+.header {
+  aspect-ratio: 0;
+}
 .header__container--content {
   display: flex;
   flex-direction: column;
@@ -443,6 +446,9 @@ body {
   border-radius: 5px;
   padding: 0rem;
   margin: 0rem;
+}
+.show:hover {
+  background-color: #FAFAFA;
 }
 .show-container {
   display: flex;

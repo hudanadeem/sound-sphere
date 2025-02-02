@@ -561,7 +561,6 @@ body {
   font-weight: 700;
   line-height: 2rem;
   color: #323232;
-  padding-left: 1.8078rem;
 }
 @media screen and (min-width: 768px) {
   .form-container__title {
@@ -646,6 +645,9 @@ body {
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 500;
+}
+.form__comment:hover {
+  background-color: #000000;
 }
 @media screen and (min-width: 768px) {
   .form__comment {

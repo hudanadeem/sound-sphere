@@ -204,7 +204,6 @@
         font-weight: 700;
         line-height: 2rem;
         color: $BandSite-Black;
-        padding-left: 1.8078rem;
 
         @include tablet{
             padding-left: 2rem;
@@ -288,6 +287,9 @@
         color: $White;
         text-transform: uppercase;
         font-weight: 500;
+        &:hover{
+            background-color: $BandSite-DarkBlack;
+        }
 
         @include tablet{
             width: 20%;

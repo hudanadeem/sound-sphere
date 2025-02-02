@@ -4,6 +4,7 @@
 @use "./partials/mixins" as *;
 
 .header{
+    aspect-ratio: 0;
 
     &__container--content{
         display: flex;
@@ -102,6 +103,10 @@
     padding: 0rem;
     margin: 0rem;
 
+    &:hover{
+        background-color: $Alabaster
+    }
+
     &-container{
         display: flex;
         flex-direction: column;
@@ -120,6 +125,7 @@
         color: $White;
         text-transform: uppercase;
         font-weight: 500;
+
     }
     &__date--title, &__venue--title, &__location--title{
         margin: 1rem 0 0.5rem 0;
