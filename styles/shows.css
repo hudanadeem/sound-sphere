@@ -446,6 +446,7 @@ body {
   border-radius: 5px;
   padding: 0rem;
   margin: 0rem;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .show {
@@ -461,6 +462,9 @@ body {
 .show:hover {
   background-color: #FAFAFA;
 }
+.show.selected {
+  background-color: #E1E1E1;
+}
 @media screen and (min-width: 768px) {
   .show-container__title {
     padding: 0 1rem;
@@ -469,10 +473,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .show-container__title {
+    padding-top: 2rem;
     padding-left: 9rem;
-    position: absolute;
-    bottom: 15%;
-    z-index: 2;
   }
 }
 .show__header {
@@ -504,7 +506,6 @@ body {
     position: relative;
     width: 65%;
     left: 30%;
-    padding-top: 5rem;
   }
 }
 .show-container {

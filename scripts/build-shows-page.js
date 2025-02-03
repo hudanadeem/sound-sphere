@@ -37,6 +37,12 @@ const shows = [
   function displayShows(show){
       const showEl = document.createElement("div");
       showEl.className = "show";
+
+      showEl.addEventListener("click", function () {
+        document.querySelectorAll(".show").forEach((el) => el.classList.remove("selected"));
+
+        showEl.classList.add("selected");
+    });
   
       const dateEl = document.createElement("div");
       const dateTitle = document.createElement("h3");
