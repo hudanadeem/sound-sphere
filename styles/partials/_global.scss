@@ -13,7 +13,7 @@ body{
 }
 
 .nav{
-    background-color: $BandSite-Black;
+    background-color: $bandsite-black;
     @include flex(column, center, center);
     padding: 2rem 0 1rem 0; 
 
@@ -65,7 +65,7 @@ body{
     }
 
     &__link {
-        color: $Mercury;
+        color: $mercury;
         font-size: 1.2rem;
         font-weight: 100;
         text-decoration: none;
@@ -92,7 +92,7 @@ body{
             left: 0;
             height: .25rem;
             width: 100%;
-            background-color: $White;
+            background-color: $white;
             transform: scaleX(0);
 
             @include tablet{
@@ -101,7 +101,7 @@ body{
         }
 
         &:hover {
-            color: $White;
+            color: $white;
         }
 
         &:hover::after {
@@ -110,7 +110,7 @@ body{
 
         &--active {
             font-weight: bold;
-            color: $White;
+            color: $white;
 
             &::after {
                 transform: scaleX(1);
@@ -150,7 +150,7 @@ body{
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $BandSite-Black; 
+        background-color: $bandsite-black; 
         opacity: 0.5; 
         z-index: 1; 
     }
@@ -158,8 +158,8 @@ body{
 
 .footer{
 
-    background-color: $BandSite-Black;
-    color:$Mercury;
+    background-color: $bandsite-black;
+    color:$mercury;
     padding: 1.3438rem;
     @include flex(column, space-between, flex-start);
     margin-top: 1.3438rem;
@@ -184,7 +184,7 @@ body{
         font-size: 2.25rem;
         line-height: 2.5rem;
         font-weight: 700;
-        color: $White;
+        color: $white;
         padding-bottom: 1.3438rem;
     }
 
@@ -192,7 +192,7 @@ body{
         padding-bottom: 1.3438rem;
         a{
             text-decoration: none;
-            color: $Mercury;
+            color: $mercury;
         }
 
         &--container{

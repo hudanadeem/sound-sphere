@@ -77,15 +77,15 @@ form.addEventListener("submit",(e)=>{
 
     let error = false;
 
-    nameInput.classList.remove("error");
-    commentInput.classList.remove("error");
+    nameInput.classList.remove("form__error");
+    commentInput.classList.remove("form__error");
 
     if (nameInput.value.trim() === "") {
-        nameInput.classList.add("error");
+        nameInput.classList.add("form__error");
         error = true;
     }
     if (commentInput.value.trim() === "") {
-        commentInput.classList.add("error");
+        commentInput.classList.add("form__error");
         error = true;
     }
 
@@ -96,13 +96,10 @@ form.addEventListener("submit",(e)=>{
     const item = {
         name: e.target.name.value,
         comment: e.target.comment.value,
-        date: "01/30/2025"
+        date: "Just Now"
     };
 
-    console.log(item);
-
-
-    comments.unshift(item);//check w TA
+    comments.unshift(item);
     listEl.replaceChildren();
     comments.forEach(displayComments);
 

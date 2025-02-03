@@ -7,9 +7,7 @@
     aspect-ratio: 0;
 
     &__container--content{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        @include flex(column, flex-start, flex-start);
         padding: 2rem 1rem;
     
         @include tablet{
@@ -21,7 +19,7 @@
     
     }
     &__title{
-        color: $White; 
+        color: $white; 
         font-size: 2rem;
         line-height: 2.5rem;
         font-weight: 700;
@@ -40,7 +38,7 @@
     }
 
     &__album--title{
-        color: $White; 
+        color: $white; 
         font-size: 1rem;
         line-height: 2.5rem;
         font-weight: 400;
@@ -98,26 +96,23 @@
 }
 
 .show{
-    border-bottom: 2px solid $Mercury;
+    border-bottom: 2px solid $mercury;
     border-radius: 5px;
     padding: 0rem;
     margin: 0rem;
-    background-color: $White;
+    background-color: $white;
 
     @include tablet{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 2px solid $Mercury;
+        @include flex(row, space-between, center);
+        border-bottom: 2px solid $mercury;
         padding: 1rem;
         width: 100%;
     }
     &:hover{
-        background-color: $Alabaster;
+        background-color: $alabaster;
     }
     &.selected{
-        background-color: $Mercury;
+        background-color: $mercury;
     }
 
     &-container__title{
@@ -136,14 +131,11 @@
         display: none;
 
         @include tablet{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+            @include flex(row, space-between, center);
             font-weight: bold;
             text-transform: uppercase;
             font-size: 0.85rem;
-            color: $Silver;
+            color: $silver;
             padding: 1rem;
             width: 100%;
             &--title{
@@ -180,8 +172,8 @@
         width: 100%;
         height: 2.5rem;
         border-radius: 4px;
-        background-color: $BandSite-Black;
-        color: $White;
+        background-color: $bandsite-black;
+        color: $white;
         text-transform: uppercase;
         font-weight: 500;
 
@@ -196,7 +188,7 @@
     &__date--title, &__venue--title, &__location--title{
         margin: 1rem 0 0.5rem 0;
         text-transform: uppercase;
-        color: $Silver;
+        color: $silver;
         font-weight: 700;
         font-size: 0.75rem;
 
@@ -220,6 +212,7 @@
         }
     }
 }
+
 .list{
     @include desktop{
         position: relative;

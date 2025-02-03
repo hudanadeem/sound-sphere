@@ -7,7 +7,7 @@
     position: absolute;
     bottom: 40%; 
     left: 5%;
-    color: $White; 
+    color: $white; 
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 700;
@@ -29,7 +29,7 @@
         font-size: 2rem;
         line-height: 2rem;
         font-weight: 700;
-        color: $BandSite-Black;
+        color: $bandsite-black;
 
         @include tablet {
             font-size: 3rem;
@@ -62,10 +62,11 @@
     }
 
     &__quote {
-        font-size:1.5625rem;
+        font-size:1rem;
+        padding-top: 1rem;
         font-weight: 700;
-        line-height: 2.5rem;
-        color: $BandSite-Black; 
+        line-height: 1.5rem;
+        color: $bandsite-black; 
         @include tablet{
             padding-top: 2.3919rem;
         }
@@ -76,11 +77,10 @@
         }
     }
     &__quote--name{
-        padding-top: .725rem;
-        font-size:1.5625rem;
+        font-size:1rem;
         font-weight: 700;
         line-height: 2.5rem;
-        color: $BandSite-Black;
+        color: $bandsite-black;
         @include tablet{
             font-size:1.25rem; 
         } 
@@ -99,7 +99,6 @@
             gap: 3.125rem;
             padding: 0 7.5547rem;
             display: flex;
-            flex-direction: row; 
         }
         @include desktop{
             padding: 0 15.75rem;
@@ -111,7 +110,7 @@
         font-size: 1.5625rem;
         font-weight: 200;
         line-height: 1.875rem;
-        color: $BandSite-DarkBlack;
+        color: $bandsite-darkblack;
 
         @include tablet{
             padding-left: 7.5547rem;
@@ -123,10 +122,10 @@
         }
     }
     &__content--para1 , &__content--para2{
-        font-size: 1.5625rem;
-        line-height: 2.1875rem;
+        font-size: 0.95rem;
+        line-height: 1.5rem;
         font-weight: 500;
-        color: $BandSite-Black;
+        color: $bandsite-black;
         padding-bottom: 3.125rem;
 
         @include tablet{
@@ -158,7 +157,7 @@
         padding-left: 1.3438rem; 
         padding-bottom: .806rem;
         font-size: 2.5rem; 
-        color: $BandSite-Black;
+        color: $bandsite-black;
 
         @include tablet{
             padding-left: 3.1478rem;
@@ -188,7 +187,6 @@
     }
 }
 
-
 .form{
 
     display: flex;
@@ -203,7 +201,7 @@
         font-size: 1.75rem;
         font-weight: 700;
         line-height: 2rem;
-        color: $BandSite-Black;
+        color: $bandsite-black;
 
         @include tablet{
             padding-left: 2rem;
@@ -218,8 +216,7 @@
     }
 
     &-container__layout{
-        display: flex;
-        align-items: flex-start;
+        @include flex(row, flex-start, flex-start);
         gap: 1rem;
 
         @include tablet{
@@ -249,20 +246,20 @@
         flex-direction: column;
         margin: 1rem 0;
         text-transform: uppercase;
-        color: $Silver;
+        color: $silver;
         font-weight: 700;
         font-size: 0.75rem;
     }
     &__input{
         padding: 15px; 
         height: 3rem;
-        border: 2px solid $Mercury;
+        border: 2px solid $mercury;
         border-radius: 5px;
         box-sizing: border-box;
         margin-top: 0.5rem;
 
         &:focus{
-            border: 2px solid $BandSite-Black;
+            border: 2px solid $bandsite-black;
         }
 
     }
@@ -270,11 +267,11 @@
         height: 8rem; 
         resize: vertical; 
         padding: 15px; 
-        border: 2px solid $Mercury;
+        border: 2px solid $mercury;
         border-radius: 5px;
         margin-top: 0.5rem;
         &:focus{
-            border: 2px solid $BandSite-Black;
+            border: 2px solid $bandsite-black;
         }
     }
     &__comment{
@@ -283,20 +280,18 @@
         width: 100%;
         height: 2.5rem;
         border-radius: 4px;
-        background-color: $BandSite-Black;
-        color: $White;
+        background-color: $bandsite-black;
+        color: $white;
         text-transform: uppercase;
         font-weight: 500;
         &:hover{
-            background-color: $BandSite-DarkBlack;
+            background-color: $bandsite-darkblack;
         }
 
         @include tablet{
             width: 20%;
-            display: flex;
+            @include flex(row, center, center);
             align-self: flex-end;
-            justify-content: center;
-            align-items: center;
         }
         @include desktop{
             width: 40%;
@@ -304,21 +299,19 @@
     }
     &__input::placeholder,
     &__textarea::placeholder {
-        color: $BandSite-Black; 
+        color: $bandsite-black; 
         font-size: 1rem; 
         font-weight: 300;
         font-family: 'Nunito Sans';
     }
-}
-
-.error {
-    border: 2px solid #D22D2D;
+    &__error {
+        border: 2px solid #D22D2D;
+    }
 }
 
 .comment{
-    border-top: 2px solid $Silver;
-    display: flex;
-    align-items: flex-start;
+    border-top: 2px solid $silver;
+    @include flex(row, flex-start, flex-start);
     gap: 1rem;
     padding: 1rem 0;
     width: 100%;
@@ -334,18 +327,17 @@
     }
 
     &:last-child {
-        border-bottom: 2px solid $Silver;
+        border-bottom: 2px solid $silver;
     }
 
     &__header{
-        display: flex;
-        justify-content: space-between;
+        @include flex(row, space-between, center);
         padding-top: 0.5rem;
         padding-bottom: 0;
     }
 
     &__name{
-        color: $BandSite-Black;
+        color: $bandsite-black;
         font-weight: 700;
     }
 
@@ -354,13 +346,13 @@
     }
 
     &__date{
-        color: $Silver;
+        color: $silver;
     }
 
     &__pfp{
         height: 2.5rem;
         width: 2.5rem;
-        background-color: $Mercury;
+        background-color: $mercury;
         border-radius: 50%;
         overflow: hidden;
         flex-shrink: 0;
