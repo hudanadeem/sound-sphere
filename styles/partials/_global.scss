@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "Nunito Sans";
+    font-family: "Nunito Sans", Arial, sans-serif;
     width: 100%;
 }
 
@@ -74,13 +74,13 @@ body{
         position: relative;
 
         @include tablet{
+            padding: 1rem 0;
             margin-left: 1rem;
             margin-right: 1rem;
         }
 
         @include desktop{
-            padding-right: 0;
-            padding-left: 0;
+            padding: 1rem 0;
             margin-left: 1rem;
             margin-right: 1rem;
         }

@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: "Nunito Sans";
+  font-family: "Nunito Sans", Arial, sans-serif;
   width: 100%;
 }
 
@@ -108,14 +108,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .nav__link {
+    padding: 1rem 0;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .nav__link {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 1rem 0;
     margin-left: 1rem;
     margin-right: 1rem;
   }
