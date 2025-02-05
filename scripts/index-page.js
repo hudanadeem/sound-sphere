@@ -96,7 +96,7 @@ form.addEventListener("submit",(e)=>{
     const item = {
         name: e.target.name.value,
         comment: e.target.comment.value,
-        date: "Just Now"
+        date: new Date().toLocaleDateString(),
     };
 
     comments.unshift(item);
