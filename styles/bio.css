@@ -621,6 +621,10 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   margin-top: 0.5rem;
+  background-color: #E1E1E1;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Nunito Sans";
 }
 .form__input:focus {
   border: 2px solid #323232;
@@ -632,6 +636,10 @@ body {
   border: 2px solid #E1E1E1;
   border-radius: 5px;
   margin-top: 0.5rem;
+  background-color: #E1E1E1;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Nunito Sans";
 }
 .form__textarea:focus {
   border: 2px solid #323232;
@@ -682,7 +690,7 @@ body {
 }
 
 .comment {
-  border-top: 2px solid #AFAFAF;
+  border-top: 1px solid #AFAFAF;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -705,7 +713,7 @@ body {
   }
 }
 .comment:last-child {
-  border-bottom: 2px solid #AFAFAF;
+  border-bottom: 1px solid #AFAFAF;
 }
 .comment__header {
   display: flex;

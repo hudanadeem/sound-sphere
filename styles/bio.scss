@@ -257,6 +257,11 @@
         border-radius: 5px;
         box-sizing: border-box;
         margin-top: 0.5rem;
+        background-color: $mercury;
+        font-size: 1rem; 
+        font-weight: 300;
+        font-family: 'Nunito Sans';
+
 
         &:focus{
             border: 2px solid $bandsite-black;
@@ -270,6 +275,12 @@
         border: 2px solid $mercury;
         border-radius: 5px;
         margin-top: 0.5rem;
+        background-color: $mercury;
+        font-size: 1rem; 
+        font-weight: 300;
+        font-family: 'Nunito Sans';
+
+
         &:focus{
             border: 2px solid $bandsite-black;
         }
@@ -284,6 +295,7 @@
         color: $white;
         text-transform: uppercase;
         font-weight: 500;
+        
         &:hover{
             background-color: $bandsite-darkblack;
         }
@@ -310,7 +322,7 @@
 }
 
 .comment{
-    border-top: 2px solid $silver;
+    border-top: 1px solid $silver;
     @include flex(row, flex-start, flex-start);
     gap: 1rem;
     padding: 1rem 0;
@@ -327,7 +339,7 @@
     }
 
     &:last-child {
-        border-bottom: 2px solid $silver;
+        border-bottom: 1px solid $silver;
     }
 
     &__header{

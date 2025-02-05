@@ -466,6 +466,9 @@ body {
 .show.selected {
   background-color: #E1E1E1;
 }
+.show-container__title {
+  color: #323232;
+}
 @media screen and (min-width: 768px) {
   .show-container__title {
     padding: 0 1rem;
@@ -474,8 +477,10 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .show-container__title {
-    padding-top: 2rem;
-    padding-left: 9rem;
+    position: relative;
+    top: 4rem;
+    left: 7rem;
+    width: 90%;
   }
 }
 .show__header {
