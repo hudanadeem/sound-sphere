@@ -1,30 +1,23 @@
-const comments = [
-  {
-    name: "Isaac Tadesse",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    date: new Date("10/20/2023"),
-  },
-  {
-    name: "Christina Cabrera",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    date: new Date("02/28/2024"),
-  },
-  {
-    name: "Victor Pinto",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    date: new Date("08/14/2024"),
-  },
-];
-
-comments.forEach(comment => {
-  comment.date = comment.date.toLocaleDateString(); 
-});
+import BandSiteApi from "./band-site-api.js";
+const api_key = "66fc9040-cab8-417b-a0da-d3137846725a"
+const api = new BandSiteApi(api_key);
 
 const listEl = document.getElementById("list");
-comments.forEach(displayComments);
+
+async function getCommentsAndRender(){
+  try{
+    const comments = await api.getComments();
+    listEl.innerHTML="";
+
+    comments.forEach(displayComments);
+
+  }catch(e){
+      console.log(e);
+  }
+}
+
+getCommentsAndRender();
+
 
 function displayComments(comment){
   const commentEl = document.createElement("div");
@@ -48,7 +41,8 @@ function displayComments(comment){
   //date
   const dateEl = document.createElement("div");
   dateEl.className = "comment__date";
-  dateEl.textContent = comment.date;
+  const date = new Date(comment.timestamp)
+  dateEl.textContent = `${date.toLocaleDateString()}`;   
 
   headerEl.append(nameEl, dateEl);
 
@@ -61,15 +55,13 @@ function displayComments(comment){
   containerEl.append(headerEl,contentEl);
   commentEl.append(containerEl);
 
-  listEl.append(commentEl);
+  listEl.prepend(commentEl);
 }
-
-
 
 const form = document.getElementById("form");
 
 
-form.addEventListener("submit",(e)=>{
+form.addEventListener("submit", async (e)=>{
     e.preventDefault();
 
     const nameInput = e.target.name;
@@ -93,17 +85,17 @@ form.addEventListener("submit",(e)=>{
       return;
     }
 
-    const item = {
-        name: e.target.name.value,
-        comment: e.target.comment.value,
-        date: new Date().toLocaleDateString(),
+    const newComment = {
+      name: e.target.name.value,
+      comment: e.target.comment.value,
     };
-
-    comments.unshift(item);
-    listEl.replaceChildren();
-    comments.forEach(displayComments);
+    const postComments = await api.postComments(newComment);
+    // console.log(postComments);
+    
+    getCommentsAndRender()
 
     nameInput.value = "";
     commentInput.value = "";
 });
+
 
