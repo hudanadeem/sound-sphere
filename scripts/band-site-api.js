@@ -27,6 +27,16 @@ class BandSiteApi{
             console.log(error); 
         }
     }
+
+    async getShows(){
+        try{
+            const getShows = await axios.get(`${this.baseURL}/showdates?api_key=${this.apiKey}`);
+            return getShows.data;
+        }catch(error){
+            console.log(error);
+            
+        }
+    }
 }
 
 
