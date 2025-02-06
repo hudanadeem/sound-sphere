@@ -19,7 +19,7 @@ async function getCommentsAndRender(){
 getCommentsAndRender();
 
 
-function displayComments(comment){
+ function displayComments(comment){
   const commentEl = document.createElement("div");
   commentEl.className = "comment";
 
@@ -46,13 +46,27 @@ function displayComments(comment){
 
   headerEl.append(nameEl, dateEl);
 
-
   //comment
   const contentEl = document.createElement("div");
   contentEl.className = "comment__content";
   contentEl.textContent = comment.comment;
-  
-  containerEl.append(headerEl,contentEl);
+
+  const actionContainer = document.createElement("div");
+  actionContainer.className = "comment__actions";
+
+
+  //delete
+  const deleteBtn = document.createElement("button");
+  deleteBtn.className = "comment__delete";
+  deleteBtn.textContent = "Delete";
+
+  deleteBtn.addEventListener("click", async () => {
+      await api.deleteComment(comment.id);
+      window.location.reload();
+  });
+
+  actionContainer.append(deleteBtn)
+  containerEl.append(headerEl,contentEl,actionContainer);
   commentEl.append(containerEl);
 
   listEl.prepend(commentEl);
@@ -89,8 +103,7 @@ form.addEventListener("submit", async (e)=>{
       name: e.target.name.value,
       comment: e.target.comment.value,
     };
-    const postComments = await api.postComments(newComment);
-    // console.log(postComments);
+    await api.postComments(newComment);
     
     getCommentsAndRender()
 

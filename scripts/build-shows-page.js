@@ -34,7 +34,7 @@ function displayShows(show){
     dateTitle.textContent = "Date"
     dateEl.className = "show__date";
     const date = new Date(show.date)
-    dateEl.textContent = `${date.toLocaleDateString()}`;
+    dateEl.textContent = `${date.toDateString()}`;
     showEl.append(dateTitle);
     showEl.append(dateEl);
 

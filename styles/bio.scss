@@ -382,4 +382,21 @@
         gap: 0.5rem; 
         width: 100%;
     }
+    &__delete {
+        align-self: flex-end;
+        background-color: transparent;
+        color: $bandsite-black;
+        border: 2px solid $bandsite-black;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover{
+            background-color: $bandsite-darkblack;
+            color: $white;
+            border: 2px solid $white;
+        }
+    }
 }
