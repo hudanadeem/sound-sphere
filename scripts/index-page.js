@@ -18,7 +18,6 @@ async function getCommentsAndRender(){
 
 getCommentsAndRender();
 
-
  function displayComments(comment){
   const commentEl = document.createElement("div");
   commentEl.className = "comment";
@@ -54,18 +53,37 @@ getCommentsAndRender();
   const actionContainer = document.createElement("div");
   actionContainer.className = "comment__actions";
 
-
   //delete
   const deleteBtn = document.createElement("button");
   deleteBtn.className = "comment__delete";
-  deleteBtn.textContent = "Delete";
 
   deleteBtn.addEventListener("click", async () => {
       await api.deleteComment(comment.id);
       window.location.reload();
   });
 
-  actionContainer.append(deleteBtn)
+  //like
+  const likeBtnContainer = document.createElement("div"); 
+  likeBtnContainer.className = "comment__like-container";
+
+  const likeBtn = document.createElement("button");
+  likeBtn.className = "comment__like";
+
+  const likeCount = document.createElement("span"); 
+  likeCount.className = "comment__like-count";
+  likeCount.textContent = comment.likes; 
+
+  likeBtnContainer.append(likeBtn, likeCount);
+
+  likeBtn.addEventListener("click", async () => {
+    const updatedComment = await api.likeComment(comment.id);
+
+    if (updatedComment) {
+        likeCount.textContent = updatedComment.likes; 
+    }
+  });
+
+  actionContainer.append(deleteBtn, likeBtnContainer)
   containerEl.append(headerEl,contentEl,actionContainer);
   commentEl.append(containerEl);
 

@@ -47,6 +47,15 @@ class BandSiteApi{
             console.log(error); 
         }
     }
+
+    async likeComment(id){
+        try{
+            const likeEl = await axios.put(`${this.baseURL}/comments/${id}/like?api_key=${this.apiKey}`)
+            return likeEl.data;
+        }catch(error){
+            console.log(error);
+        }
+    }
 }
 
 

@@ -754,19 +754,31 @@ body {
   gap: 0.5rem;
   width: 100%;
 }
-.comment__delete {
-  align-self: flex-end;
-  background-color: transparent;
-  color: #323232;
-  border: 2px solid #323232;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
+.comment__actions {
+  display: flex;
+  justify-content: space-between;
 }
-.comment__delete:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-  border: 2px solid #FFFFFF;
+.comment__delete {
+  border: none;
+  width: 0.9rem;
+  height: 1.15rem;
+  background-image: url(../assets/icons/icon-delete.svg);
+}
+.comment__like {
+  border: none;
+  width: 1.2rem;
+  height: 1.15rem;
+  background-image: url(../assets/icons/icon-like.svg);
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.comment__like-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.comment__like-count {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
 }/*# sourceMappingURL=bio.css.map */

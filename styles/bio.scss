@@ -382,21 +382,38 @@
         gap: 0.5rem; 
         width: 100%;
     }
-    &__delete {
-        align-self: flex-end;
-        background-color: transparent;
-        color: $bandsite-black;
-        border: 2px solid $bandsite-black;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-        font-weight: 600;
-        text-transform: uppercase;
+    &__actions{
+        display: flex;
+        justify-content: space-between;
 
-        &:hover{
-            background-color: $bandsite-darkblack;
-            color: $white;
-            border: 2px solid $white;
-        }
     }
+    &__delete {
+        border: none;
+        width: 0.9rem;
+        height: 1.15rem;
+        background-image: url(../assets/icons/icon-delete.svg);
+
+    }
+    
+    
+    &__like {
+        border: none;
+        width: 1.2rem;
+        height: 1.15rem;
+        background-image: url(../assets/icons/icon-like.svg);
+        background-color: $white;
+        cursor: pointer;
+
+        &-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; 
+        }
+
+        &-count {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #333;
+        }
+    } 
 }
