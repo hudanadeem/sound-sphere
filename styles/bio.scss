@@ -3,418 +3,408 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-.header__title{
-    position: absolute;
-    bottom: 40%; 
-    left: 5%;
-    color: $primary-text-light; 
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: 700;
-    z-index: 2;
+.header__title {
+  position: absolute;
+  bottom: 40%;
+  left: 5%;
+  color: $primary-text-light;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  z-index: 2;
 
-    @include tablet{
-        font-size: 4rem;
-    }
-    @include desktop{
-        left: 10%;
-        bottom: 45%;
-    }   
+  @include tablet {
+    font-size: 4rem;
+  }
+  @include desktop {
+    left: 10%;
+    bottom: 45%;
+  }
 }
 
 .main {
+  &__title {
+    padding: 2.6875rem 0 1.3438rem 1.3438rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: $primary-text-dark;
 
-    &__title{
-        padding: 2.6875rem 0 1.3438rem 1.3438rem;
-        font-size: 2rem;
-        line-height: 2rem;
-        font-weight: 700;
-        color: $primary-text-dark;
-
-        @include tablet {
-            font-size: 3rem;
-            padding-top: 3.75rem;
-            padding-left: 3.75rem;
-            padding-bottom: 2.5rem;
-        }
-        @include desktop{
-            padding-left: 9rem;
-            padding-bottom: 3.75rem;            
-        }
+    @include tablet {
+      font-size: 3rem;
+      padding-top: 3.75rem;
+      padding-left: 3.75rem;
+      padding-bottom: 2.5rem;
     }
-    
-    &__image--container {
-        padding-left: 1.3438rem;
-        padding-right: 1.3438rem;
+    @include desktop {
+      padding-left: 9rem;
+      padding-bottom: 3.75rem;
+    }
+  }
 
-        @include tablet{
-            padding: 0 7.5547rem;
-        }
+  &__image--container {
+    padding-left: 1.3438rem;
+    padding-right: 1.3438rem;
 
-        @include desktop{
-            padding:0 15.75rem;
-        }
+    @include tablet {
+      padding: 0 7.5547rem;
     }
 
-    &__image {
-        width: 100%;
-        height: auto;
+    @include desktop {
+      padding: 0 15.75rem;
     }
+  }
 
-    &__quote {
-        font-size:1rem;
-        padding-top: 1rem;
-        font-weight: 700;
-        line-height: 1.5rem;
-        color: $primary-text-dark; 
-        @include tablet{
-            padding-top: 2.3919rem;
-        }
-        @include desktop{
-            font-size:1.25rem;
-            line-height: 1.875rem;
-            width: 80%;
-        }
-    }
-    &__quote--name{
-        font-size:1rem;
-        font-weight: 700;
-        line-height: 2.5rem;
-        color: $primary-text-dark;
-        @include tablet{
-            font-size:1.25rem; 
-        } 
-        @include desktop{
-            font-size:1.125rem;
-            font-weight: 600;
-        }
-    }
-    &__content{
-        flex-direction: column; 
-        gap: 1.25rem;
-        padding: 1.3438rem;
-        font-size: 1.25rem;
+  &__image {
+    width: 100%;
+    height: auto;
+  }
 
-        @include tablet{
-            gap: 3.125rem;
-            padding: 0 7.5547rem;
-            display: flex;
-        }
-        @include desktop{
-            padding: 0 15.75rem;
-        }
+  &__quote {
+    font-size: 1rem;
+    padding-top: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: $primary-text-dark;
+    @include tablet {
+      padding-top: 2.3919rem;
     }
-    &__content--title{
-        padding-top: 2.6875rem;
-        padding-left: 1.3438rem;
-        font-size: 1.5625rem;
-        font-weight: 200;
-        line-height: 1.875rem;
-        color: $primary-text-dark;
+    @include desktop {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      width: 80%;
+    }
+  }
+  &__quote--name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: $primary-text-dark;
+    @include tablet {
+      font-size: 1.25rem;
+    }
+    @include desktop {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+  }
+  &__content {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.3438rem;
+    font-size: 1.25rem;
 
-        @include tablet{
-            padding-left: 7.5547rem;
-            padding-bottom: 2rem;
-        }
-        @include desktop{
-            padding-left: 15.75rem;
-            padding-top: 4.375rem;
-        }
+    @include tablet {
+      gap: 3.125rem;
+      padding: 0 7.5547rem;
+      display: flex;
     }
-    &__content--para1 , &__content--para2{
-        font-size: 0.95rem;
-        line-height: 1.5rem;
-        font-weight: 500;
-        color: $primary-text-dark;
-        padding-bottom: 3.125rem;
+    @include desktop {
+      padding: 0 15.75rem;
+    }
+  }
+  &__content--title {
+    padding-top: 2.6875rem;
+    padding-left: 1.3438rem;
+    font-size: 1.5625rem;
+    font-weight: 200;
+    line-height: 1.875rem;
+    color: $primary-text-dark;
 
-        @include tablet{
-            font-size: .9375rem;
-            line-height: 1.5625rem;
-            font-weight: 100;
-            padding-bottom: 3.125rem;
-        }
+    @include tablet {
+      padding-left: 7.5547rem;
+      padding-bottom: 2rem;
     }
+    @include desktop {
+      padding-left: 15.75rem;
+      padding-top: 4.375rem;
+    }
+  }
+  &__content--para1,
+  &__content--para2 {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: $primary-text-dark;
+    padding-bottom: 3.125rem;
+
+    @include tablet {
+      font-size: 0.9375rem;
+      line-height: 1.5625rem;
+      font-weight: 100;
+      padding-bottom: 3.125rem;
+    }
+  }
 }
 
-.gallery{
+.gallery {
+  &__image--container {
+    padding: 0 1.3438rem;
+    @include flex(column, center, center);
+    gap: 1.875rem;
 
-    &__image--container {
-        padding: 0 1.3438rem;
-        @include flex(column,center,center);
-        gap: 1.875rem; 
-        
-        @include tablet{
-            padding: 3.1478rem;
-            @include flex(row,space-between,flex-start);
-            flex-wrap: wrap;
-        }
-        @include desktop{
-            padding: 2.625rem 8.75rem 2rem 8.75rem;
-        }
+    @include tablet {
+      padding: 3.1478rem;
+      @include flex(row, space-between, flex-start);
+      flex-wrap: wrap;
     }
-    &__title {
-        padding-left: 1.3438rem; 
-        padding-bottom: .806rem;
-        font-size: 2.5rem; 
-        color: $primary-text-dark;
-
-        @include tablet{
-            padding-left: 3.1478rem;
-            padding-bottom: 0;
-            font-size: 2.25rem;
-            line-height: 2rem;
-            font-weight: 700;
-        }
-        @include desktop{
-            padding-left: 8.75rem;
-            padding-bottom: 1.25rem;
-        }
-
+    @include desktop {
+      padding: 2.625rem 8.75rem 2rem 8.75rem;
     }
-    &__image{
-        width: 100%; 
-        height: auto; 
-        filter: grayscale(100%);
-        
-        &:hover {
-            filter: grayscale(0); 
-        }
+  }
+  &__title {
+    padding-left: 1.3438rem;
+    padding-bottom: 0.806rem;
+    font-size: 2.5rem;
+    color: $primary-text-dark;
 
-        @include tablet{
-            width: calc(33.33% - 1.25rem);
-        }
+    @include tablet {
+      padding-left: 3.1478rem;
+      padding-bottom: 0;
+      font-size: 2.25rem;
+      line-height: 2rem;
+      font-weight: 700;
     }
+    @include desktop {
+      padding-left: 8.75rem;
+      padding-bottom: 1.25rem;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0);
+    }
+
+    @include tablet {
+      width: calc(33.33% - 1.25rem);
+    }
+  }
 }
 
-.form{
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
+  &-container {
+    padding: 1rem 1.3438rem 0rem 1.3438rem;
+  }
+
+  &-container__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: $primary-text-dark;
+
+    @include tablet {
+      padding-left: 2rem;
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 2rem;
+    }
+
+    @include desktop {
+      padding-left: 7.75rem;
+    }
+  }
+
+  &-container__layout {
+    @include flex(row, flex-start, flex-start);
+    gap: 1rem;
+
+    @include tablet {
+      padding: 1rem 5.5rem 0rem 5.5rem;
+    }
+    @include desktop {
+      padding: 1rem 23.5rem 0rem 23.5rem;
+    }
+  }
+
+  &__pfp {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-image: url(../assets/images/Mohan-muruge.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 2.8rem 0;
+    @include tablet {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color: $secondary-text-color;
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+  &__input {
+    padding: 0.9375rem;
+    height: 3rem;
+    border: 0.125rem solid $secondary-color;
+    border-radius: 0.3125rem;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    background-color: $secondary-color;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Nunito Sans";
+
+    &:focus {
+      border: 0.125rem solid $primary-text-dark;
+    }
+  }
+  &__textarea {
+    height: 8rem;
+    resize: vertical;
+    padding: 0.9375rem;
+    border: 0.125rem solid $secondary-color;
+    border-radius: 0.3125rem;
+    margin-top: 0.5rem;
+    background-color: $secondary-color;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Nunito Sans";
+    resize: none;
+
+    &:focus {
+      border: 0.125rem solid $primary-text-dark;
+    }
+  }
+  &__comment {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    background-color: $primary-text-dark;
+    color: $primary-text-light;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $hover-state-color;
+    }
+
+    @include tablet {
+      width: 20%;
+      @include flex(row, center, center);
+      align-self: flex-end;
+    }
+    @include desktop {
+      width: 40%;
+    }
+  }
+  &__input::placeholder,
+  &__textarea::placeholder {
+    color: $primary-text-dark;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Nunito Sans";
+  }
+  &__error {
+    border: 0.125rem solid #d22d2d;
+  }
+}
+
+.comment {
+  border-top: 0.0625rem solid $secondary-text-color;
+  @include flex(row, flex-start, flex-start);
+  gap: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+
+  &-viewer {
+    padding: 1rem 1.3438rem 0rem 1.3438rem;
+    @include tablet {
+      padding: 1rem 6.75rem 0rem 6.75rem;
+    }
+    @include desktop {
+      padding: 1rem 25rem 0rem 25rem;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0.0625rem solid $secondary-text-color;
+  }
+
+  &__header {
+    @include flex(row, space-between, center);
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+  }
+
+  &__name {
+    color: $primary-text-dark;
+    font-weight: 700;
+  }
+
+  &__content {
+    padding-bottom: 1rem;
+  }
+
+  &__date {
+    color: $secondary-text-color;
+  }
+
+  &__pfp {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    @include tablet {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &__box {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-
-    &-container{
-        padding: 1rem 1.3438rem 0rem 1.3438rem;
-    }
-
-    &-container__title{
-        font-size: 1.75rem;
-        font-weight: 700;
-        line-height: 2rem;
-        color: $primary-text-dark;
-
-        @include tablet{
-            padding-left: 2rem;
-            font-size: 2.25rem;
-            font-weight: 700;
-            line-height: 2rem;
-        }
-
-        @include desktop{
-            padding-left: 7.75rem;
-        }
-    }
-
-    &-container__layout{
-        @include flex(row, flex-start, flex-start);
-        gap: 1rem;
-
-        @include tablet{
-            padding: 1rem 5.5rem 0rem 5.5rem;
-        }
-        @include desktop{
-            padding: 1rem 23.5rem 0rem 23.5rem;
-        }
-    }
-
-    &__pfp{
-        height: 2.5rem;
-        width: 2.5rem;
-        background-image: url(../assets/images/Mohan-muruge.jpg);
-        background-size: cover;
-        border-radius: 50%;
-        margin: 2.8rem 0;
-        @include tablet{
-            height: 3rem;
-            width: 3rem;
-        }
- 
-    }
-
-    &__label{
-        display: flex;
-        flex-direction: column;
-        margin: 1rem 0;
-        text-transform: uppercase;
-        color: $secondary-text-color;
-        font-weight: 700;
-        font-size: 0.75rem;
-    }
-    &__input{
-        padding: .9375rem; 
-        height: 3rem;
-        border: .125rem solid $secondary-color;
-        border-radius: .3125rem;
-        box-sizing: border-box;
-        margin-top: 0.5rem;
-        background-color: $secondary-color;
-        font-size: 1rem; 
-        font-weight: 300;
-        font-family: 'Nunito Sans';
-
-
-        &:focus{
-            border: .125rem solid $primary-text-dark;
-        }
-
-    }
-    &__textarea {
-        height: 8rem; 
-        resize: vertical; 
-        padding: .9375rem; 
-        border: .125rem solid $secondary-color;
-        border-radius: .3125rem;
-        margin-top: 0.5rem;
-        background-color: $secondary-color;
-        font-size: 1rem; 
-        font-weight: 300;
-        font-family: 'Nunito Sans';
-        resize: none;
-
-
-        &:focus{
-            border: .125rem solid $primary-text-dark;
-        }
-    }
-    &__comment{
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        width: 100%;
-        height: 2.5rem;
-        border-radius: .25rem;
-        background-color: $primary-text-dark;
-        color: $primary-text-light;
-        text-transform: uppercase;
-        font-weight: 500;
-        
-        &:hover{
-            background-color: $hover-state-color;
-        }
-
-        @include tablet{
-            width: 20%;
-            @include flex(row, center, center);
-            align-self: flex-end;
-        }
-        @include desktop{
-            width: 40%;
-        }
-    }
-    &__input::placeholder,
-    &__textarea::placeholder {
-        color: $primary-text-dark; 
-        font-size: 1rem; 
-        font-weight: 300;
-        font-family: 'Nunito Sans';
-    }
-    &__error {
-        border: .125rem solid #D22D2D;
-    }
-}
-
-.comment{
-    border-top: .0625rem solid $secondary-text-color;
-    @include flex(row, flex-start, flex-start);
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 0.5rem;
     width: 100%;
+  }
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__delete {
+    border: none;
+    width: 0.9rem;
+    height: 1.15rem;
+    background-image: url(../assets/icons/icon-delete.svg);
+  }
 
-    &-viewer{
-        padding: 1rem 1.3438rem 0rem 1.3438rem;
-        @include tablet{
-            padding: 1rem 6.75rem 0rem 6.75rem;
-        }
-        @include desktop{
-            padding: 1rem 25rem 0rem 25rem;
-        }
+  &__like {
+    border: none;
+    width: 1.2rem;
+    height: 1.15rem;
+    background-image: url(../assets/icons/icon-like.svg);
+    background-color: $primary-text-light;
+    cursor: pointer;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    &:last-child {
-        border-bottom: .0625rem solid $secondary-text-color;
+    &-count {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #333;
     }
-
-    &__header{
-        @include flex(row, space-between, center);
-        padding-top: 0.5rem;
-        padding-bottom: 0;
-    }
-
-    &__name{
-        color: $primary-text-dark;
-        font-weight: 700;
-    }
-
-    &__content{
-        padding-bottom: 1rem;
-    }
-
-    &__date{
-        color: $secondary-text-color;
-    }
-
-    &__pfp{
-        height: 2.5rem;
-        width: 2.5rem;
-        background-color: $secondary-color;
-        border-radius: 50%;
-        overflow: hidden;
-        flex-shrink: 0;
-
-        @include tablet{
-            height: 3rem;
-            width: 3rem;
-        }
-    }
-
-    &__box{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        gap: 0.5rem; 
-        width: 100%;
-    }
-    &__actions{
-        display: flex;
-        justify-content: space-between;
-
-    }
-    &__delete {
-        border: none;
-        width: 0.9rem;
-        height: 1.15rem;
-        background-image: url(../assets/icons/icon-delete.svg);
-
-    }
-    
-    
-    &__like {
-        border: none;
-        width: 1.2rem;
-        height: 1.15rem;
-        background-image: url(../assets/icons/icon-like.svg);
-        background-color: $primary-text-light;
-        cursor: pointer;
-
-        &-container {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem; 
-        }
-
-        &-count {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: #333;
-        }
-    } 
+  }
 }

@@ -1,20 +1,20 @@
 @use "./variables" as *;
 
 @mixin tablet {
-    @media screen and (min-width: $tablet-min) {
-      @content;
-    }
+  @media screen and (min-width: $tablet-min) {
+    @content;
+  }
 }
-  
+
 @mixin desktop {
-    @media screen and (min-width: $desktop-min) {
-        @content;
-    }
+  @media screen and (min-width: $desktop-min) {
+    @content;
+  }
 }
 
 @mixin flex($direction: row, $justify: flex-start, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
