@@ -59,12 +59,6 @@ Make sure you have [Visual Studio Code](https://code.visualstudio.com/) installe
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/hudanadeem/soundsphere.git
-cd soundsphere
+git clone https://github.com/hudanadeem/sound-sphere.git
+cd sound-sphere
 ```
-
-## 🧑‍🎤 About the Project
-
-This website was created as a mock concept for a fictional band. It's a front-end focused project to showcase web design skills, responsiveness, and user interactivity with modern JavaScript and SCSS.
-
----
